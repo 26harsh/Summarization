@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../OneDrive/Desktop/Mastek/assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ezyzip",
+		"liveServer.settings.port": 5501
+	}
+}

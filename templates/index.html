@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>MASTEK </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='line-icons.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='nivo-lightbox.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/animate.css') }}">
+
+
+
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" > -->
+    <!-- Icon -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css"> -->
+    <!-- Nivo Lightbox -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" > -->
+    <!-- Animate -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/animate.css"> -->
+    <!-- Main Style -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/main.css"> -->
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="shortcut icon" type="image/jpg" href="{{ url_for('static', filename='logohack.png') }}"/>
+
+  </head>
+  <body>
+
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg bg-inverse fixed-top scrolling-navbar">
+        <div id="nav-container" class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a href="#" class="navbar-brand"><img id="nav-logo" src="{{ url_for('static', filename='logohack.png') }}" alt=""></a>       
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item active">
+                <a class="nav-link" href="#header-wrap">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#prizes">
+                  Summarize
+                </a>
+              </li>
+          
+              <li class="nav-item">
+                <a class="nav-link" href="#domains">
+                 Our Team
+                </a>
+              </li>
+                        
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">
+                  CONTACT
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Hero Area Start -->
+      <div id="hero-area" class="hero-area-bg">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-9 col-sm-12">
+              <div class="contents text-center">
+        
+                  <img id="hero-image" style="margin-left: auto; margin-right: auto;" src="assets/img//background/logohack.png" width="200px" height="200px" alt="">
+                  <div class="banner-btn">
+                    <a href="#prizes" id="hero-register" class="btn btn-common">Summarize the text</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </header>
+ 
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-xs-12">
+            <div class="img-thumb">
+              <img style="border-radius: 50%; " class="img-fluid" src="{{ url_for('static', filename='logohack.png') }}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-xs-12">
+            <div class="about-content">
+              <div>
+                <div class="about-text">  
+                  <h2>About The Problem Statement</h2>
+                  <p>In the work from home scenario prevailing over the last 18 months and with hybrid working picking steam, most Official meetings have been or will be conducted virtually.</p>
+                  <p>
+                    While MICROSOFT TEAMS / Google Meet / Zoom do provide a feature to download TRANSCRIPT, it does not summarise the meeting.
+                  </p>
+                </div>
+                <ul class="stylish-list mb-3 hackathon_list">
+                  <li ><i style="color:turquoise;" class="lni-check-mark-circle"></i>Summarize the text</li>
+                  <li ><i style="color:turquoise;" class="lni-check-mark-circle"></i>Give input in text</li>
+                  <li ><i style="color:turquoise;" class="lni-check-mark-circle"></i>Upload the file</li>
+                  <li ><i style="color:turquoise;" class="lni-check-mark-circle"></i>Upload the file in voice format</li>
+            
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+   
+<section id="prizes" class="section-padding">
+  <form action="{{ url_for('summarize')}}" method="POST" enctype = "multipart/form-data">
+    <div class="section-title-header text-center">
+      
+      <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Text Summarization</h2>
+      <p class="wow fadeInDown" data-wow-delay="0.2s">Choose the method you want </p>
+    </div>
+  <div class="container">
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="blog-item">
+        <!-- <div class="blog-image">
+          <a >
+            <img class="img-fluid" src="{{ url_for('static', filename='./textSum1.png') }}" alt="">
+          </a>
+        </div> -->
+        <div class="descr">
+          <!-- <label for="myfile">Select a file:</label>
+          <input type="file" id="myfile" name="myfile" required>  -->
+            <!-- <p>Enter the number of lines in summary</p>
+            <input name="numOfLines" type="text"></input> -->
+          <div class="icon">
+            <i class="lni-camera"></i>
+          </div>
+          <h3 class="title">
+            <a >
+              Text summarization based on Abstractive Method
+              <br>
+              Upload the file
+            </a>
+          </h3>
+          <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+        </div>
+        <div class="descr">
+          <div class="icon">
+            <i class="lni-camera"></i>
+          </div>
+          <h3 class="title">
+            <div>
+             
+              <input class="form-control form-control-lg" id="myfile" name="myfile" type="file" required>
+            </div>
+          </h3>
+          <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+        </div>
+        <div class="descr">
+          <div class="icon">
+            <i class="lni-camera"></i>
+          </div>
+          <h3 class="title">
+            <div class="form-outline">
+            <input name="numOfLines" type="text" id="typeNumber" class="form-control" placeholder="Enter number of lines to summarize"></input>
+
+              <!-- <input type="number" id="typeNumber" class="form-control" placeholder="Enter number of lines to summarize" name="numOfLines"  /> -->
+          </div>
+          </h3>
+          <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+        </div>
+        <div class="banner-btn" >
+          <input type="submit" class="btn btn-common btn-info" value="Summarize"  id="hero-register">
+
+          <!-- <input type="button" value="Summarize the text"  id="hero-register" class="btn btn-common btn-info"> -->
+          
+        </div>
+      </div> 
+    </div>
+  </form>
+ 
+</section>
+
+<section id="prizes" class="section-padding">
+  <form action="{{ url_for('summarize')}}" method="POST" enctype = "multipart/form-data">
+    <div class="section-title-header text-center">
+      
+      <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Text Summarization</h2>
+      <p class="wow fadeInDown" data-wow-delay="0.2s">Choose the method you want </p>
+    </div>
+  <div class="container">
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="blog-item">
+        <!-- <div class="blog-image">
+          <a >
+            <img class="img-fluid" src="{{ url_for('static', filename='./textSum1.png') }}" alt="">
+          </a>
+        </div> -->
+        <div class="descr">
+          <!-- <label for="myfile">Select a file:</label>
+          <input type="file" id="myfile" name="myfile" required>  -->
+            <!-- <p>Enter the number of lines in summary</p>
+            <input name="numOfLines" type="text"></input> -->
+          <div class="icon">
+            <i class="lni-camera"></i>
+          </div>
+          <h3 class="title">
+            <a >
+              Text summarization based on Abstractive Method
+              <br>
+              Upload the file
+            </a>
+          </h3>
+          <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+        </div>
+        <div class="descr">
+          <div class="icon">
+            <i class="lni-camera"></i>
+          </div>
+          <h3 class="title">
+            <div>
+             
+              <input class="form-control form-control-lg" id="myfile" name="myfile" type="file" required>
+            </div>
+          </h3>
+          <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+        </div>
+        <div class="descr">
+          <div class="icon">
+            <i class="lni-camera"></i>
+          </div>
+          <h3 class="title">
+            <div class="form-outline">
+            <input name="numOfLines" type="text" id="typeNumber" class="form-control" placeholder="Enter number of lines to summarize"></input>
+
+              <!-- <input type="number" id="typeNumber" class="form-control" placeholder="Enter number of lines to summarize" name="numOfLines"  /> -->
+          </div>
+          </h3>
+          <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+        </div>
+        <div class="banner-btn" >
+          <input type="submit" class="btn btn-common btn-info" value="Summarize"  id="hero-register">
+
+          <!-- <input type="button" value="Summarize the text"  id="hero-register" class="btn btn-common btn-info"> -->
+          
+        </div>
+      </div> 
+    </div>
+  </form>
+ 
+</section>
+
+   
+
+    <!-- Blog Section Start -->
+    <section id="domains" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Meet the team</h2>
+              <p class="wow fadeInDown" data-wow-delay="0.2s">The team behind the work </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="blog-item">
+              <div class="blog-image">
+                <a>
+                  <img class="img-fluid" src="{{ url_for('static', filename='./domain/adil.jpeg') }}" alt="">
+                </a>
+              </div>
+              <div class="descr">
+                <div class="icon">
+                  <i class="lni-image"></i>
+                </div>
+                <h3 class="title">
+                  <a>
+                    Adil Khatri
+                  </a>
+                </h3>
+                <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="blog-item">
+              <div class="blog-image">
+                <a>
+                  <img class="img-fluid" src="{{ url_for('static', filename='./domain/pp.jpeg') }}" alt="">
+                </a>
+              </div>
+              <div class="descr">
+                <div class="icon">
+                  <i class="lni-arrow-right"></i>
+                </div>
+                <h3 class="title">
+                  <a>
+                   Pruthviraj Patil
+                  </a>
+                </h3>
+                <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="blog-item">
+              <div class="blog-image">
+                <a >
+                  <img class="img-fluid" src="{{ url_for('static', filename='./domain/harsh.png') }}" alt="">
+                </a>
+              </div>
+              <div class="descr">
+                <div class="icon">
+                  <i class="lni-camera"></i>
+                </div>
+                <h3 class="title">
+                  <a >
+                   Harsh Chotaliya
+                  </a>
+                </h3>
+                <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="blog-item">
+              <div class="blog-image">
+                <a >
+                  <img class="img-fluid" src="{{ url_for('static', filename='./domain/shubham.jpg') }}" alt="">
+                </a>
+              </div>
+              <div class="descr">
+                <div class="icon">
+                  <i class="lni-camera"></i>
+                </div>
+                <h3 class="title">
+                  <a >
+                 Shubham
+                  </a>
+                </h3>
+                <p class="hack-desc">Lorem ipsum dolor sit amet, consectetur adipsing elit, sed do eiusmodincididunt ut labore et dolore</p>
+              </div>
+              
+            </div>
+          </div>
+       
+          
+        </div>
+      
+      </div>
+    </section>
+   
+    <section id="faq" class="intro section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">CONTACT</h2>
+              <p class="wow fadeInDown" data-wow-delay="0.2s">Trouble using this facility? !</p>
+              <p class="wow fadeInDown" data-wow-delay="0.2s">Have some suggestions? !</p>
+
+              <p class="wow fadeInDown" data-wow-delay="0.2s">Shoot your message directly from here !</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="row intro-wrapper">
+      
+       
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <!-- Contact text Start -->
+    <section id="contact-text">
+      <div class="container">
+        <div class="row contact-wrapper">
+          <div class="col-lg-4 col-md-5 col-xs-12">
+            <ul>
+              <a href="https://goo.gl/maps/2iCHCjXTsTZMdU4H6">
+                <li>
+                  <i class="lni-home"></i>
+                </li>
+                <li><span>KJSIT, Sion Mumbai</li>
+              </a>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-3 col-xs-12">
+            <ul>
+              <a href="tel:+91-7620172617">
+                <li>
+                  <i class="lni-phone"></i>
+                </li>
+                <li><span>+91 **********</span></li>
+              </a>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-3 col-xs-12">
+            <ul>
+              <a href="mailto:pruthviraj.p@somaiya.edu">
+                <li>
+                  <i class="lni-envelope"></i>
+                </li>
+                <li><span>pruthviraj.p@somaiya.edu</span></li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact text End -->
+
+    <footer>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-12 col-xs-12">
+          
+            <div class="footer-logo">
+              <img id="footer-logo" src="assets/img/background/logohack.png" alt="">
+            </div>
+            <div class="social-icons-footer">
+              <ul>
+                <li class="facebook"><a target="_blank" href="#"><i class="lni-facebook-filled"></i></a></li>
+                <li class="twitter"><a target="_blank" href="#"><i class="lni lni-linkedin-original"></i></i></a></li>
+                <li class="pinterest"><a target="_blank" href="#"><i class="lni lni-instagram-original"></i></a></li>
+              </ul>
+            </div>
+            <div class="site-info">
+              <p>Designed and Developed with 💖 by our Mastek Team Stm24</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Mar 1, 2022 23:59:59").getTime();
+      
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+      
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+      
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+        // Display the result in the element with id="demo"
+        document.getElementById("count-days").innerHTML = ('0' + days).substr(-2) ;
+        document.getElementById("count-hours").innerHTML = ('0' + hours).substr(-2) ;
+        document.getElementById("count-mins").innerHTML = ('0' + minutes).substr(-2) ;
+        document.getElementById("count-sec").innerHTML = ('0' + seconds).substr(-2) ;
+      
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("clock").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+      </script>
+
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+    	<i class="lni-chevron-up"></i>
+    </a>
+
+    <div id="preloader">
+      <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='jquery-min.js') }}"></script>  
+
+    <script src="{{ url_for('static', filename='popper.min.js') }}"></script>  
+
+    <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>  
+
+    <script src="{{ url_for('static', filename='countdown.min.js') }}"></script>  
+
+    <script src="{{ url_for('static', filename='waypoints.min.js') }}"></script>  
+
+    <script src="{{ url_for('static', filename='counterup.min.js') }}"></script>  
+	
+    <script src="{{ url_for('static', filename='jquery.nav.js') }}"></script>  
+
+    <script src="{{ url_for('static', filename='easing.min.js') }}"></script>  
+	<script src="{{ url_for('static', filename='wow.js') }}"></script>      
+
+	<script src="{{ url_for('static', filename='nivo-lightbox.js') }}"></script>      
+
+	<script src="{{ url_for('static', filename='video.js') }}"></script>      
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>      
+  </body>
+</html>

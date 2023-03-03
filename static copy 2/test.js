@@ -1,0 +1,4 @@
+function myFunc()
+{
+    alert("dsdf")
+}

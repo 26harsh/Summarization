@@ -1,0 +1,23 @@
+The growth of technologies like Artificial Intelligence (AI), Big Data & Internet of Things (IoT), etc. has marked many advancements in the technological world since the last decade. These technologies have a wide range of applications. One such application is “Chatterbot or
+“Chatbot”. Chatbots are conversational AIs, which mimics the
+human while conversing & eliminates the need of human by
+automating mundane tasks. In the study undertaken, we have
+created a chatbot in education domain & it is named as
+“College Enquiry Chatbot”. This chatbot is a web-based
+application that analyses and understands user’s queries and
+provides an instant and accurate response. Rasa technology is
+used to construct this chatbot. It’s an open-source technology,
+which uses its two main packages i.e., Rasa Core & Rasa
+Natural Language Understanding (NLU) in order to build a
+Contextual AI Chatbot. NLU is used to infer the intent and to
+extract the necessary entities from user input & the Rasa Core
+provides the output by building a probabilistic model with the
+help of Recurrent Neural Network (RNN). Evaluation of the
+model is done by getting a confusion matrix and performance
+measures like Precision, Accuracy & F1 Score which come out
+to be 0.628, 0.725 and 0.669 respectively on average basis. This
+chatbot’s accuracy, lack of dependability on human resources,
+24 x 7 accessibility and low maintenance creates various
+opportunities for its implementation. This conversational agent
+can not only be used in educational institutions but also in
+places where enquiry becomes a tedious task.

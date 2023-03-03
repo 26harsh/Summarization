@@ -1,0 +1,1 @@
+ Hello one and all present here now we are going to present on the topic summarization of Teams meeting we have completed a summarization model and we are now researching on how to convert speech into text.
